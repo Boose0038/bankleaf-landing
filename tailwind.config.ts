@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -78,6 +79,7 @@ export default {
 			fontFamily: {
 				sans: ['Montserrat', 'sans-serif'],
 				display: ['Playfair Display', 'serif'],
+				mono: ['var(--font-mono)', 'monospace']
 			},
 			keyframes: {
 				'accordion-down': {
@@ -169,10 +171,6 @@ export default {
 				'slide-down': 'slide-down 0.5s ease-out forwards',
 				'gradient-shift': 'gradient-shift 8s ease infinite',
 				'float': 'float 6s ease-in-out infinite'
-			},
-			fontFamily: {
-				sans: ['var(--font-sans)', 'system-ui', 'sans-serif'],
-				mono: ['var(--font-mono)', 'monospace']
 			}
 		}
 	},
