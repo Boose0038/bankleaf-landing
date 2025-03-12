@@ -21,12 +21,12 @@ export const TestimonialCard = ({
   return (
     <div
       className={cn(
-        "glass-card p-6 rounded-2xl hover-lift",
+        "glass-card p-6 rounded-2xl hover-lift border border-bank-accent/20",
         className
       )}
       style={style}
     >
-      <QuoteIcon className="w-10 h-10 text-bank-accent/20 mb-4" />
+      <QuoteIcon className="w-10 h-10 text-bank-accent mb-4" />
       <p className="text-lg mb-6 italic">{quote}</p>
       <div>
         <p className="font-semibold">{author}</p>

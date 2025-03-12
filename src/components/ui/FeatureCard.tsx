@@ -21,7 +21,7 @@ export const FeatureCard = ({
   return (
     <div
       className={cn(
-        "glass-card p-6 rounded-2xl hover-lift",
+        "glass-card p-6 rounded-2xl hover-lift border border-bank-accent/20",
         className
       )}
       style={style}

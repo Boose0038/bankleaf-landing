@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -64,9 +63,9 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				bank: {
-					'primary': '#0F172A',
-					'secondary': '#3B82F6',
-					'accent': '#0EA5E9',
+					'primary': '#000000',
+					'secondary': '#ea384c',
+					'accent': '#d4af37',
 					'muted': '#E2E8F0',
 					'light': '#F8FAFC',
 				}
@@ -75,6 +74,10 @@ export default {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
+			},
+			fontFamily: {
+				sans: ['Montserrat', 'sans-serif'],
+				display: ['Playfair Display', 'serif'],
 			},
 			keyframes: {
 				'accordion-down': {

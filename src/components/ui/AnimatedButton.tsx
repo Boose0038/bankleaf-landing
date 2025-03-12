@@ -13,22 +13,18 @@ export const AnimatedButton = forwardRef<HTMLButtonElement, AnimatedButtonProps>
       <button
         ref={ref}
         className={cn(
-          "relative inline-flex items-center justify-center overflow-hidden rounded-full font-medium transition-all focus:outline-none focus:ring-2 focus:ring-bank-secondary focus:ring-offset-2",
+          "relative inline-flex items-center justify-center overflow-hidden rounded-full font-medium transition-all focus:outline-none focus:ring-2 focus:ring-bank-accent focus:ring-offset-2",
           "before:absolute before:inset-0 before:z-0 before:transition-all before:duration-500",
           "hover-lift",
           {
             // Variant styles
             "bg-gradient-to-r from-bank-secondary to-bank-accent text-white": variant === "primary",
-            
             "bg-white text-bank-primary border border-bank-muted": variant === "secondary",
-            
-            "bg-transparent text-bank-primary border border-bank-muted": variant === "outline",
-            
+            "bg-transparent text-bank-primary border border-bank-accent/30": variant === "outline",
             "bg-transparent text-bank-primary": variant === "ghost",
             
             // Before element styles for each variant
             "before:opacity-0 before:bg-gradient-to-r before:from-bank-secondary before:to-bank-accent before:hover:opacity-10": variant === "primary",
-            
             "before:opacity-0 before:bg-gradient-to-r before:from-bank-secondary/10 before:to-bank-accent/10 before:hover:opacity-100": variant === "secondary" || variant === "outline" || variant === "ghost",
             
             // Size styles
