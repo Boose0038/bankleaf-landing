@@ -1,12 +1,14 @@
 
 import { cn } from "@/lib/utils";
 import { QuoteIcon } from "lucide-react";
+import { CSSProperties } from "react";
 
 interface TestimonialCardProps {
   quote: string;
   author: string;
   role: string;
   className?: string;
+  style?: CSSProperties;
 }
 
 export const TestimonialCard = ({
@@ -14,6 +16,7 @@ export const TestimonialCard = ({
   author,
   role,
   className,
+  style,
 }: TestimonialCardProps) => {
   return (
     <div
@@ -21,6 +24,7 @@ export const TestimonialCard = ({
         "glass-card p-6 rounded-2xl hover-lift",
         className
       )}
+      style={style}
     >
       <QuoteIcon className="w-10 h-10 text-bank-accent/20 mb-4" />
       <p className="text-lg mb-6 italic">{quote}</p>

@@ -19,16 +19,17 @@ export const AnimatedButton = forwardRef<HTMLButtonElement, AnimatedButtonProps>
           {
             // Variant styles
             "bg-gradient-to-r from-bank-secondary to-bank-accent text-white": variant === "primary",
-            "before:opacity-0 before:bg-gradient-to-r before:from-bank-secondary before:to-bank-accent before:hover:opacity-10": variant === "primary",
             
             "bg-white text-bank-primary border border-bank-muted": variant === "secondary",
-            "before:opacity-0 before:bg-gradient-to-r before:from-bank-secondary/10 before:to-bank-accent/10 before:hover:opacity-100": variant === "secondary",
             
             "bg-transparent text-bank-primary border border-bank-muted": variant === "outline",
-            "before:opacity-0 before:bg-gradient-to-r before:from-bank-secondary/10 before:to-bank-accent/10 before:hover:opacity-100": variant === "outline",
             
             "bg-transparent text-bank-primary": variant === "ghost",
-            "before:opacity-0 before:bg-gradient-to-r before:from-bank-secondary/10 before:to-bank-accent/10 before:hover:opacity-100": variant === "ghost",
+            
+            // Before element styles for each variant
+            "before:opacity-0 before:bg-gradient-to-r before:from-bank-secondary before:to-bank-accent before:hover:opacity-10": variant === "primary",
+            
+            "before:opacity-0 before:bg-gradient-to-r before:from-bank-secondary/10 before:to-bank-accent/10 before:hover:opacity-100": variant === "secondary" || variant === "outline" || variant === "ghost",
             
             // Size styles
             "text-xs px-3 py-1": size === "sm",

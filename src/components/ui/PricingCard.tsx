@@ -2,6 +2,7 @@
 import { cn } from "@/lib/utils";
 import { CheckIcon } from "lucide-react";
 import { AnimatedButton } from "./AnimatedButton";
+import { CSSProperties } from "react";
 
 interface PricingCardProps {
   title: string;
@@ -10,6 +11,7 @@ interface PricingCardProps {
   features: string[];
   popular?: boolean;
   className?: string;
+  style?: CSSProperties;
 }
 
 export const PricingCard = ({
@@ -19,6 +21,7 @@ export const PricingCard = ({
   features,
   popular = false,
   className,
+  style,
 }: PricingCardProps) => {
   return (
     <div
@@ -27,6 +30,7 @@ export const PricingCard = ({
         popular ? "gradient-border shadow-lg relative" : "",
         className
       )}
+      style={style}
     >
       {popular && (
         <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 text-xs font-medium bg-gradient-to-r from-bank-secondary to-bank-accent text-white rounded-full">

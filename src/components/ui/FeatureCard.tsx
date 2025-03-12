@@ -1,12 +1,14 @@
 
 import { cn } from "@/lib/utils";
 import { LucideIcon } from "lucide-react";
+import { CSSProperties } from "react";
 
 interface FeatureCardProps {
   title: string;
   description: string;
   icon: LucideIcon;
   className?: string;
+  style?: CSSProperties;
 }
 
 export const FeatureCard = ({
@@ -14,6 +16,7 @@ export const FeatureCard = ({
   description,
   icon: Icon,
   className,
+  style,
 }: FeatureCardProps) => {
   return (
     <div
@@ -21,6 +24,7 @@ export const FeatureCard = ({
         "glass-card p-6 rounded-2xl hover-lift",
         className
       )}
+      style={style}
     >
       <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-gradient-to-r from-bank-secondary/20 to-bank-accent/20">
         <Icon className="w-6 h-6 text-bank-secondary" />
